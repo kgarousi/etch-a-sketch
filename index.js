@@ -6,7 +6,7 @@ let numCols = window.prompt("How many columns?");
 const container = document.querySelector(".container");
 
 if(numRows * numCols <= 10000){
-    createGrid(rows, columns, container);
+    createGrid(numRows, numCols, container);
 }
 else{
     alert("Cannot create grid larger than 100 x 100");
