@@ -30,7 +30,4 @@ html, body{
     flex-basis: 100%;
     border: 1px solid blue;
   }
-  .row:hover{
-    background-color: aqua;
-    opacity: 55%;
-  }
+  

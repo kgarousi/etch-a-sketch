@@ -1,3 +1,6 @@
+function random(number) {
+    return Math.floor(Math.random() * number + 1);
+}
 
 function createGrid(){
     let numRows = window.prompt("How many rows?");
@@ -12,6 +15,10 @@ function createGrid(){
             const row = document.createElement("div");
             row.classList.add("row");
             column.appendChild(row);
+            row.addEventListener("mouseover", function bgChange(){
+                const rndCol = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+                row.style.backgroundColor = rndCol;
+            })
         }
     }
 }
