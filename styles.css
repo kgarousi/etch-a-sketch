@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+  height: 100vh;
+  width: 100vw;
+  border: none;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    width: 80vw;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .row{
+    flex-basis: 100%;
+    border: 1px solid blue;
+  }
+  .row:hover{
+    background-color: aqua;
+    opacity: 55%;
+  }
