@@ -1,11 +1,18 @@
 function random(number) {
     return Math.floor(Math.random() * number + 1);
 }
+let numRows = window.prompt("How many rows?");
+let numCols = window.prompt("How many columns?");
+const container = document.querySelector(".container");
 
-function createGrid(){
-    let numRows = window.prompt("How many rows?");
-    let numCols = window.prompt("How many columns?");
-    const container = document.querySelector(".container");
+if(numRows * numCols <= 10000){
+    createGrid(rows, columns, container);
+}
+else{
+    alert("Cannot create grid larger than 100 x 100");
+} 
+
+function createGrid(numRows, numCols, container){
 
     for(let i = 0; i < numCols; i++){
         const column = document.createElement("div");
@@ -23,8 +30,17 @@ function createGrid(){
     }
 }
 
-const newGridBtn = document.querySelector("button");
+const button = document.querySelector("button");
 
-newGridBtn.addEventListener("click", ()=>{
-    createGrid();
+button.addEventListener("click", function changeSize(size) {
+    rows = window.prompt("Enter number of rows");
+    columns = window.prompt("Enter number of columns");
+    container.innerHTML = "";
+    if(rows * columns <= 10000){
+        createGrid(rows, columns, container);
+        console.log(rows * columns)
+    }
+    else{
+        alert("Cannot create grid larger than 100 x 100");
+    }    
 });
