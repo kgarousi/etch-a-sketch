@@ -5,21 +5,40 @@ html, body{
   height: 100vh;
   width: 100vw;
   border: none;
+  background-color: cadetblue;
 }
 .button{
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 14px;
+
+}
+
+.new-button{
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 12px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 160px;
+  height: 60px;
+}
+.new-button:hover{
+  background-color: rgb(17, 53, 88);
+  cursor: pointer;
 }
 .container{
     display: flex;
     justify-content: center;
     min-height: 80vh;
     width: 80vw;
-    border: none;
+    border: solid;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    border: groove rgb(46, 46, 152);
+    border-width: 10px;
+    background-color: white;
 }
 .column {
     display: flex;
@@ -28,6 +47,6 @@ html, body{
   }
   .row{
     flex-basis: 100%;
-    border: 1px solid blue;
+    border: 1px solid rgb(44, 44, 110);
   }
   
